@@ -4,7 +4,8 @@ import java.util.Scanner;
 
 public class ScanerFacade {
 	static Scanner scaner = new Scanner(System.in);
-	public static String handlInput(String message) {	
+	
+	public static String handlNameInput(String message) {	
 		String name;
 		
 		while(true) {
@@ -14,5 +15,6 @@ public class ScanerFacade {
 		}
 		return name;
 	}
+
 	
 }

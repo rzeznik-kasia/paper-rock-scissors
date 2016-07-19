@@ -9,32 +9,30 @@ import org.junit.Test;
 
 
 public class GestureFactoryTest {
-	private GestureFactory gf;
 
 	@Before
 	public void initialize(){
-		gf = new GestureFactory();
-		gf.gestureStrings = new TreeSet<>();
+		GestureFactory.gestureStrings = new TreeSet<>();
 	}
 	
 	@Test
 	public void shouldSayStoneContaingAStone() {
-		gf.gestureStrings.add(Stone.getGesture());
-		assertEquals("stone O", gf.getAvailableGestures());	
+		GestureFactory.gestureStrings.add(Stone.getGesture());
+		assertEquals("stone O", GestureFactory.getAvailableGestures());	
 	}
 	
 	@Test
 	public void shouldSayPaperStoneContaingAPaperStone() {
-		gf.gestureStrings.add(Paper.getGesture());
-		gf.gestureStrings.add(Stone.getGesture());
-		assertEquals("paper |, stone O", gf.getAvailableGestures());	
+		GestureFactory.gestureStrings.add(Paper.getGesture());
+		GestureFactory.gestureStrings.add(Stone.getGesture());
+		assertEquals("paper |, stone O", GestureFactory.getAvailableGestures());	
 	}
 	
 	@Test
 	public void shouldSayPaperStoneContaingAStonePaper() {
-		gf.gestureStrings.add(Stone.getGesture());
-		gf.gestureStrings.add(Paper.getGesture());
-		assertEquals("paper |, stone O", gf.getAvailableGestures());	
+		GestureFactory.gestureStrings.add(Stone.getGesture());
+		GestureFactory.gestureStrings.add(Paper.getGesture());
+		assertEquals("paper |, stone O", GestureFactory.getAvailableGestures());	
 	}
 	
 }

@@ -4,18 +4,20 @@ package prsGame;
 public class PRSGame {
 
 	public static void main(String[] args) {
+		GestureFactory.gestureInit();
 		String message = "Pierwszy gracz podaje imię: ";
-		String name = ScanerFacade.handlInput(message);
+		String name = ScanerFacade.handlNameInput(message);
 		Player p1 = new Player(name);
-		GestureFactory gf = new GestureFactory();
 		
 		message = "Drugi gracz podaje imię: ";
-		name = ScanerFacade.handlInput(message);
+		name = ScanerFacade.handlNameInput(message);
 		Player p2 = new Player(name);
 		
-		message = "Pierwszy gracz podaje znak jakim będzie grał ("
-				+ gf.getAvailableGestures() + "): ";
-		System.out.println(message);
+		message = p1.getName() + " podaje znak jakim będzie grał ("
+				+ GestureFactory.getAvailableGestures() + "): ";
+		
+		Thing user1Thing = p1.getGesture();
+		Thing user2Thing = p2.getGesture();
 		
 	}
 
