@@ -19,7 +19,9 @@ public class Player {
 		String str = "";
 		// czytanie ze skanera
 
-		return null;
+		//chwilowy stub
+		str = "O";
+		return GestureFactory.createThingFromGesture(str);
 	}
 
 	

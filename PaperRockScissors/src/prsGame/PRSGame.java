@@ -19,6 +19,8 @@ public class PRSGame {
 		Thing user1Thing = p1.getGesture();
 		Thing user2Thing = p2.getGesture();
 		
+		Boolean b = user1Thing.isStrongerThan(user2Thing);
+		
 	}
 
 }
