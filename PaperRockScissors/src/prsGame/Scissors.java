@@ -10,7 +10,6 @@ public class Scissors extends Thing {
 	
 	public Scissors() {
 		super(Scissors.name);
-		addWeakerThings(new Stone());
 	}
 
 	static private void addWeakerThings(Thing thing) {
@@ -24,6 +23,10 @@ public class Scissors extends Thing {
 	@Override
 	Collection<Thing> getWeakerThings() {
 		return weakerThings;
+	}
+	
+	static {
+		addWeakerThings(new Paper());
 	}
 	
 }

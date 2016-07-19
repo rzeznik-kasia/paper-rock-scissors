@@ -10,7 +10,6 @@ public class Paper extends Thing {
 	
 	public Paper() {
 		super(Paper.name);
-		addWeakerThings(new Stone());
 	}
 
 	static private void addWeakerThings(Thing thing) {
@@ -26,5 +25,7 @@ public class Paper extends Thing {
 		return weakerThings;
 	}
 	
-
+	static {
+		addWeakerThings(new Stone());
+	}
 }

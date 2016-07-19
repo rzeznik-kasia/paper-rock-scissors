@@ -10,7 +10,6 @@ public class Stone extends Thing {
 	
 	public Stone() {
 		super(Stone.name);
-		addWeakerThings(new Scissors());
 	}
 
 	static private void addWeakerThings(Thing thing) {
@@ -26,4 +25,8 @@ public class Stone extends Thing {
 		return weakerThings;
 	}
 
+	static {
+		addWeakerThings(new Scissors());
+	}
+	
 }
