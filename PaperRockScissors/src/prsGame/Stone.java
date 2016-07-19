@@ -1,18 +1,29 @@
 package prsGame;
 
 import java.util.Collection;
+import java.util.HashSet;
 
 public class Stone extends Thing {
+	static final String name = "stone";
+	static final char gesture = 'O';
+	static Collection<Thing> weakerThings = new HashSet<>();
+	
+	public Stone() {
+		super(Stone.name);
+		addWeakerThings(new Scissors());
+	}
+
+	static private void addWeakerThings(Thing thing) {
+		weakerThings.add(thing);
+	}
 
 	public static String getGesture() {
-		
-		return "stone O";
+		return name + " " + gesture;
 	}
 
 	@Override
 	Collection<Thing> getWeakerThings() {
-		// TODO Auto-generated method stub
-		return null;
+		return weakerThings;
 	}
 
 }
