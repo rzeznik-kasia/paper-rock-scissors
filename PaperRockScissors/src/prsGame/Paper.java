@@ -4,7 +4,7 @@ public class Paper {
 
 	public static String getGesture() {
 		// TODO Auto-generated method stub
-		return null;
+		return "paper |";
 	}
 
 }

@@ -1,28 +1,31 @@
 package prsGame;
 
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
+import java.util.TreeSet;
 
-public class GestureFractory {
-
+public class GestureFactory {
+	String gestureString = "";
+	Set<String> gestureStrings = new TreeSet<>();
 	
-	public static String getAvailableGestures() {
-		String gesturesString = "";
-		Set<String> gestureStrings = new HashSet<>();
-		Iterator<String> iter = gestureStrings.iterator();
-		
+	
+	public GestureFactory() {
 		gestureStrings.add(Stone.getGesture());
 		gestureStrings.add(Paper.getGesture());
 		gestureStrings.add(Scissors.getGesture());
-		
+		//add more if some other class extends Thing
+
+	}
+
+	public String getAvailableGestures() {
+		Iterator<String> iter = gestureStrings.iterator();
 		while (iter.hasNext()) {
-			gesturesString += iter.next();
+			gestureString += iter.next();
 			if (iter.hasNext())
-				gesturesString += ", ";
+				gestureString += ", ";
 		}
 		
-		return gesturesString;
+		return gestureString;
 	}
 
 }
