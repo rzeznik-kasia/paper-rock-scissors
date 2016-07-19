@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class Stone extends Thing {
 	static final String name = "stone";
 	static final char gesture = 'O';
-	static Collection<Thing> weakerThings = new HashSet<>();
+	static Collection<Thing> weakerThings = new HashSet<>();  // lista obiektow slabszych
 	
 	public Stone() {
 		super(Stone.name);

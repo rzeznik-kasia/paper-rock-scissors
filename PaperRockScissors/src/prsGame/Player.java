@@ -15,14 +15,13 @@ public class Player {
 		this.name = name;
 	}
 
-	public Thing getGesture() {
+	public Thing getGesture(String message) {
 		String str = "";
-		// czytanie ze skanera
+		str = ScanerFacade.handleGestureInput(message); // wyswietl wiadoomsc i pobierz jakim obiektem bedzie gral gracz
 
-		//chwilowy stub
-		str = "O";
 		return GestureFactory.createThingFromGesture(str);
 	}
+
 
 	
 	
